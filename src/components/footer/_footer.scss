@@ -1,0 +1,148 @@
+.footer {
+    position: relative;
+    z-index: 1;
+  &__inner {
+    margin-bottom: 50px;
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+  &__left-box {
+  }
+  &__logo {
+    margin-bottom: 40px;
+    display: block;
+    max-width: 190px;
+    img {
+      width: 100%;
+    }
+  }
+  &__address {
+    max-width: 310px;
+    color: #ff9f18;
+  }
+  &__service {
+  }
+  &__title {
+    margin-bottom: 50px;
+    font-size: 32px;
+    color: #6b6b6b;
+    text-transform: uppercase;
+  }
+  &__item {
+    & + .footer__item {
+      margin-top: 40px;
+    }
+    a {
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: #ff9f18;
+      }
+    }
+  }
+  &__bottom {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1920px) {
+    .footer {
+        &__title {
+            font-size: 1.7vw;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .footer {
+        &__inner {
+            padding: 50px 0;
+        }
+        &__logo {
+            margin-bottom: 30px;
+        }
+        &__title {
+            margin-bottom: 40px;
+        }
+        &__item + .footer__item {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .footer {
+        &__title {
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+        &__item {
+            & + .footer__item {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        &__inner {
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        &__left-box {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        &__address {
+            text-align: right;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        &__inner {
+            margin-bottom: 40px;
+            padding: 40px 0;
+            gap: 30px;
+        }
+        &__logo {
+            max-width: 90px;
+        }
+        &__address {
+            max-width: 210px;
+            width: 100%;
+        }
+        &__title {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        &__service {
+            width: 100%;
+        }
+        &__follow {
+            width: 100%;
+            .footer__list {
+                display: flex;
+                gap: 30px;
+                // justify-content: space-between;
+            }
+            .footer__item + .footer__item {
+                margin-top: 0;
+            }
+        }
+        &__bottom {
+            display: block;
+        }
+        &__note {
+            margin-bottom: 20px;
+        }
+    }
+}

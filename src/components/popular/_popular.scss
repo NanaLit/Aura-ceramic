@@ -1,0 +1,171 @@
+.popular {
+    padding: 100px 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__description {
+        position: absolute;
+        bottom: -6vw;
+        left: 0;
+        background-color: #fff;
+        width: 20vw;
+        height: 6vw;
+        transition: all .5s ease-in-out;
+        padding: 24px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 16px;
+        p {
+            display: block;
+        }
+    }
+    &__price {
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 8px;
+    }
+    &__item {
+        width: 20vw;
+        height: 20vw;
+        background-size: cover;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+        display: block;
+        &:first-child {
+            background-image: url('/img/popular/1.jpg');
+        }
+        &:nth-child(2) {
+            background-image: url('/img/popular/2.jpg');
+        }
+        &:nth-child(3) {
+            background-color: #000;
+            display: flex;
+            color: $accent;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            svg {
+                circle {
+                    fill: #E8E0D4;
+                    transition: all .5s ease-in-out;
+                }
+                path {
+                    rotate: 0;
+                    transform-origin: center;
+                    transition: all .5s ease-in-out;
+                }
+                &:hover {
+                    circle {
+                        fill: $darkgray;
+                    }
+                    path {
+                        rotate: -45deg;
+                    }
+                }
+            }
+
+        }
+        &:last-child {
+            background-image: url('/img/popular/4.jpg');
+        }
+        &:hover {
+            .popular__description {
+                bottom: 0;
+            }
+        }
+    }
+    &__button {
+        border: none;
+        outline: none;
+        border-radius: 12px;
+        padding: 12px 16px 12px 35px;
+        background-color: #000;
+        position: relative;
+        color: #fff;
+        &::before {
+            content: '';
+            width: 15px;
+            height: 17px;
+            background-image: url('/img/popular/icon.svg');
+            display: block;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+    }
+   
+}
+@media(max-width: 1280px) {
+    .popular {
+        &__wrapper {
+            flex-wrap: wrap;
+            row-gap: 2vw;
+        }
+        &__item {
+            width: 39vw;
+            height: 39vw;
+        }
+        &__description {
+            width: 39vw;
+            height: 9vw;
+            bottom: -9vw;
+        }
+    }
+}
+@media(max-width: 991px) {
+    .popular {
+        &__item {
+            width: 45vw;
+            height: 45vw;
+        }
+        &__description {
+            width: 45vw;
+            height: 12vw;
+            bottom: -12vw;
+        }
+    }
+}
+@media(max-width: 768px) {
+    .popular {
+        &__description {
+            height: 15vw;
+            bottom: -15vw;
+        }
+    }
+}
+@media(max-width: 576px) {
+    .popular {
+        &__description {
+            display: none;
+        }
+        &__item {
+            width: 43vw;
+            height: 43vw;
+            &:nth-child(3) {
+                flex-direction: column;
+                svg {
+                    scale: 0.65;
+                }
+            }
+        }
+        &__wrapper {
+            row-gap: 8vw;
+        }
+    }
+}

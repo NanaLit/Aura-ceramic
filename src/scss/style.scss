@@ -1,0 +1,14 @@
+@import '_reset.scss';
+@import '_vars.scss';
+@import '_fonts.scss';
+@import '_libs.scss';
+@import '_global.scss';
+
+@import '../components/header/header';
+@import '../components/promo/promo';
+@import '../components/popular/popular';
+@import '../components/events/events';
+
+
+@import '../components/footer/footer';
+

@@ -1,0 +1,104 @@
+.events {
+    &__list {
+        width: 100%;
+        border-top: 1px solid rgba(0, 0, 0, .5);
+    }
+
+    &__date {
+        width: 10%;
+        font-weight: 500;
+        font-size: 40px;
+        sup {
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+    &__images {
+        width: 24%;
+        display: flex;
+        justify-content: space-between;
+        opacity: 0;
+        transition: all .5s ease-in-out;
+        .big {
+            width: 65%;
+            border-radius: 12px;
+        }
+        .small {
+            width: 29%;
+            border-radius: 12px;
+        }
+    }
+    &__description {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__name {
+        font-size: 32px;
+        width: 80%;
+        font-weight: 400;
+        font-family: 'PTSerif', serif;
+    }
+    &__wrap {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__time {
+        width: 12%;
+        font-weight: 500;
+        display: flex;
+        font-size: 16px;
+        justify-content: space-between;
+        align-items: center;
+        svg {
+            display: block;
+            path {
+                fill: #1A1A19;
+                transition: all .5s ease-in-out;
+            }
+        }
+    }
+    &__button {
+        width: 31%;
+        padding: 16px 0;
+        text-align: center;
+        color: #fff;
+        background-color: #1A1A19;
+        border: none;
+        outline: none;
+        border-radius: 12px;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        border-bottom: 1px solid rgba(0, 0, 0, .5);
+        background-color: $background;
+        color: #000;
+        transition: all .5s ease-in-out;
+        padding: 40px 100px;
+        margin: 0 auto;
+        &:hover {
+            background-color: #1A1A19;
+            color: #fff;
+            .events__images {
+                opacity: 1;
+            }
+            .events__time {
+                svg {
+                    path {
+                        fill: #fff;
+                    }
+                }
+            }
+            .events__button {
+                background-color: $accent;
+                color: #1A1A19;
+            }
+        }
+    }
+}
