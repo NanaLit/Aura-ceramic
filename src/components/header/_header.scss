@@ -42,7 +42,7 @@
   }
   &__cart {
     display: block;
-    color: #000;
+    color: $black;
     transition: all .5s ease-in-out;
     &:hover {
       color: $brown;
@@ -53,7 +53,7 @@
     outline: none;
     border: none;
     cursor: pointer;
-    color: #000;
+    color: $black;
     transition: all .5s ease-in-out;
     &:hover {
       color: $brown;
@@ -98,7 +98,7 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      background-color: #000;
+      background-color: $black;
       transition: all .5s ease-in-out;
       color: #fff;
       padding-bottom: 4vh;
@@ -112,7 +112,7 @@
     &__burger {
       display: block;
       font-size: 16px;
-      color: #000;
+      color: $black;
       background-color: transparent;
       outline: none;
       border: none;
@@ -126,7 +126,7 @@
       top: 0;
       height: auto;
       position: absolute;
-      background-color: #000;
+      background-color: $black;
       left: 110%;
       width: 100%;
       display: flex;
@@ -146,7 +146,7 @@
       top: 0;
       height: 100vh;
       position: absolute;
-      background-color: #000;
+      background-color: $black;
       left: 110%;
       width: 100%;
       display: flex;
@@ -161,7 +161,7 @@
       color: #fff;
       left: 110%;
       top: 40px;
-      background-color: #000;
+      background-color: $black;
       width: 100%;
       transition: all .5s ease-in-out;
     }
@@ -183,7 +183,7 @@
       color: #fff;
       left: 110%;
       top: 36vh;
-      background-color: #000;
+      background-color: $black;
       width: 100%;
       transition: all .5s ease-in-out;
       li {
@@ -210,7 +210,7 @@
       color: #fff;
       left: 110%;
       top: 63vh;
-      background-color: #000;
+      background-color: $black;
       width: 100%;
       transition: all .5s ease-in-out;
       font-size: 12px;

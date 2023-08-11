@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+    @include('../../components/head/_head.html', {
+        "title": "Aura ceramic | Catalog"
+    })
+
+    <body>
+        
+        <main>
+            @include('../../components/header/_header.html')
+            <section class="catalog">
+                <div class="container">
+                    <div class="catalog__header">
+                        <h1 class="title catalog__title">Каталог</h1>
+                        <button class="catalog__sort">
+                            Сортировать
+                        </button>
+                    </div>
+                    <ul class="catalog__wrapper">
+                        @include('../../components/card/_card.html', {
+                            "image": "1",
+                            "name": "Дюна",
+                            "type": "Кружка",
+                            "descr": "250ml"
+                        })
+                        @include('../../components/card/_card.html', {
+                            "image": "2",
+                            "name": "Камень",
+                            "type": "Набор",
+                            "descr": "250ml"
+                        })
+                        @include('../../components/card/_card.html', {
+                            "image": "3",
+                            "name": "Отречение",
+                            "type": "Миска",
+                            "descr": "250ml"
+                        })
+                        @include('../../components/card/_card.html', {
+                            "image": "4",
+                            "name": "Двойная ци",
+                            "type": "Кружка",
+                            "descr": "250ml"
+                        })
+                        @include('../../components/card/_card.html', {
+                            "image": "5",
+                            "name": "Аура",
+                            "type": "Ваза",
+                            "descr": "250ml"
+                        })
+                        @include('../../components/card/_card.html', {
+                            "image": "6",
+                            "name": "Комбо",
+                            "type": "Кружки",
+                            "descr": "250ml"
+                        })
+                        @include('../../components/card/_card.html', {
+                            "image": "7",
+                            "name": "Лоск",
+                            "type": "Миска",
+                            "descr": "250ml"
+                        })
+                        @include('../../components/card/_card.html', {
+                            "image": "8",
+                            "name": "Песок",
+                            "type": "Миска",
+                            "descr": "250ml"
+                        })
+                        @include('../../components/card/_card.html', {
+                            "image": "9",
+                            "name": "Тан",
+                            "type": "Ваза",
+                            "descr": "250ml"
+                        })
+                    </ul>
+                    <p class="catalog__more">Показать больше</p>
+                </div>
+                @include('../../components/sorter/_sorter.html')
+            </section>
+        </main>
+
+        @include('../../components/footer/_footer.html')
+        <script src="/js/libs/gsap.min.js"></script>
+        <script src="/js/libs/ScrollTrigger.min.js"></script>
+        <script src="/js/libs/ScrollToPlugin.min.js"></script>
+        <script src="/js/libs/SmoothScroll.min.js"></script>
+        <script src="/js/main.bundle.js"></script>
+        <script src="/js/catalog.bundle.js"></script>
+        <!-- <script src ="/js/about.bundle.js"></script> -->
+    </body>
+
+</html>
