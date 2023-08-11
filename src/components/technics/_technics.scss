@@ -1,0 +1,138 @@
+.technics {
+    padding: 200px 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__images {
+        position: relative;
+        width: 40%;
+        height: 35vw;
+        .first {
+            position: absolute;
+            width: 80%;
+            height: 90%;
+            border-radius: 20px;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .second {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            height: 65%;
+            border-radius: 12px;
+            z-index: 1;
+        }
+    }
+    &__description {
+        width: 50%;
+        p {
+            color: $darkgray;
+            margin-bottom: 40px;
+            width: 60%;
+            line-height: 1.1;
+        }
+    }
+    &__title {
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        svg {
+            width: 58px;
+            height: 58px;
+            ellipse {
+                fill: #1A1A19;
+                transition: all .5s ease-in-out;
+            }
+            path {
+                stroke: #E8E0D4;
+                rotate: 0;
+                transform-origin: center;
+                transition: all .5s ease-in-out;
+            }
+            &:hover {
+                ellipse {
+                    fill: #E8E0D4;
+                }
+                path {
+                    rotate: -45deg;
+                    stroke: #1A1A19;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 1280px) {
+    .technics {
+        padding: 150px 0;
+        &__button {
+            font-weight: 500;
+            svg {
+              scale: .8;
+            }
+        }
+    }
+}
+@media(max-width: 991px) {
+    .technics {
+        padding: 100px 0;
+        &__images {
+            height: 40vw;
+        }
+        &__title {
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+        &__description {
+            p {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+@media(max-width: 768px) {
+    .technics {
+        &__images {
+            height: 44vw;
+        }
+        &__description {
+            p {
+                width: 90%;
+            }
+        }
+    }
+}
+@media(max-width: 576px) {
+    .technics {
+        padding: 100px 0;
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__images {
+            width: 100%;
+        }
+        &__description {
+            width: 100%;
+            p {
+                margin-bottom: 20px;
+            }
+        }
+        &__images {
+            height: 95vw;
+        }
+        &__title {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        &__button {
+            gap: 10px;
+        }
+    }
+}

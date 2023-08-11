@@ -47,7 +47,7 @@
             background-image: url('/img/popular/2.jpg');
         }
         &:nth-child(3) {
-            background-color: #000;
+            background-color: #1A1A19;
             display: flex;
             color: $accent;
             justify-content: center;
@@ -147,6 +147,14 @@
             height: 15vw;
             bottom: -15vw;
         }
+        &__item {
+            &:nth-child(3) {
+                flex-direction: column;
+                svg {
+                    scale: 0.8;
+                }
+            }
+        }
     }
 }
 @media(max-width: 576px) {
@@ -157,12 +165,6 @@
         &__item {
             width: 43vw;
             height: 43vw;
-            &:nth-child(3) {
-                flex-direction: column;
-                svg {
-                    scale: 0.65;
-                }
-            }
         }
         &__wrapper {
             row-gap: 8vw;

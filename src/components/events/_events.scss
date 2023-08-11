@@ -85,9 +85,6 @@
         margin: 0 auto;
         max-width: 1600px;
         padding: 40px 0px;
-        &:first-child {
-            border-top: 1px solid rgba(0, 0, 0, .5);
-        }
     }
     &__item {
         
@@ -96,6 +93,12 @@
         transition: all .5s ease-in-out;
         // padding: 40px 100px;
         margin: 0 auto;
+        &:first-child {
+            .events__container {
+                border-top: 1px solid rgba(0, 0, 0, .5);
+
+            }
+        }
         &:hover {
             background-color: #1A1A19;
             color: #fff;
