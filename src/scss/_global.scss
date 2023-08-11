@@ -2,7 +2,7 @@ html
 body {
   position: relative;
   height: 100%;
-  color: #000;
+  color: #1A1A19;
   background-color: $background;
   font-family: "FactorA", sans-serif;
   font-size: 16px;
@@ -39,7 +39,7 @@ body.lock {
   font-family: "PTSerif", sans-serif;
   font-size: 4.5vw;
   font-weight: 400;
-  color: #000;
+  color: #1A1A19;
   line-height: 1.3;
 }
 .subtitle {
@@ -47,6 +47,7 @@ body.lock {
   font-weight: 400;
   font-size: 3vw;
   margin-bottom: 60px;
+  color: #1A1A19;
 }
 
 .sr-only {
