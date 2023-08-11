@@ -28,13 +28,14 @@ const paths = {
 function watch() {
     gulp.watch(paths.scripts.src, scripts);
     gulp.watch("src/**/**/**/*.html").on('change', gulp.parallel(html));
-    // gulp.watch("src/**/**/**/*.html").on('change', gulp.parallel(projects));
+   
     gulp.watch("src/fonts/**/*").on('all', gulp.parallel(fonts));
     gulp.watch("src/img/**/*.svg").on('all', gulp.parallel(icons));
     gulp.watch("src/img/**/*").on('all', gulp.parallel(images));
     gulp.watch("src/**/**/*.html").on('change', gulp.parallel(fileInclude));
     gulp.watch("src/js/**/*.js", gulp.parallel(copyJs));
     gulp.watch("src/assets/**/*.*", gulp.parallel(copyAssets));
+    // gulp.watch("src/**/**/**/*.html").on('change', gulp.parallel(projects));
     gulp.watch("src/mailer/*.*", gulp.parallel(copyMailer));
     gulp.watch("src/**/**/*.scss", gulp.parallel(styles));
     gulp.watch("src/scss/**/*.scss", gulp.parallel(styles));
@@ -85,7 +86,7 @@ function html() {
 //                 }))
 //         .pipe(htmlmin({ collapseWhitespace: true,
 //                         removeComments: true }))
-//         .pipe(gulp.dest("dist/projects"))
+//         .pipe(gulp.dest("dist/**/*.html"))
 //         .pipe(browserSync.stream());
 // }
 
