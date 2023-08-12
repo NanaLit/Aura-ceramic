@@ -1,5 +1,7 @@
 .header {
   overflow-x: clip;
+  filter: blur(0px);
+  transition: all .3s ease-in-out;
   &__nav {
     display: flex;
     width: 100%;
@@ -72,7 +74,9 @@
     display: none;
   }
 }
-
+.header.blur {
+  filter: blur(4px);
+}
 @media(max-width: 1280px) {
   .header {
     &__logo {

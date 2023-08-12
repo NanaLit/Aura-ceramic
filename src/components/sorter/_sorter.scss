@@ -1,4 +1,4 @@
-@mixin range-slider($width, $height, $input-top, $input-bg-color, $input-thumb-color, $float:none, $input-height:20px, $input-border-radius:14px) {
+@mixin range-slider($width, $height, $input-top, $input-bg-color, $input-thumb-color, $float:none, $input-height:1px, $input-border-radius:1px) {
     position: relative;
     width: $width;
     height: $height;
@@ -11,17 +11,18 @@
       -webkit-tap-highlight-color: rgba(255, 255, 255, 0);    
       border: none;
       border-radius: $input-border-radius;
-      background: $input-bg-color;
-      box-shadow: inset 0 1px 0 0 darken($input-bg-color,15%), inset 0 -1px 0 0 darken($input-bg-color,10%);
-      -webkit-box-shadow: inset 0 1px 0 0 darken($input-bg-color,15%), inset 0 -1px 0 0 darken($input-bg-color,10%);
+      background: #fff;
+      box-shadow: #fff;
+      -webkit-box-shadow: inset 0 1px 0 0 darken(#fff,15%), inset 0 -1px 0 0 darken(#fff,10%);
       overflow: hidden;
       left: 0;
-      top: $input-top;
+      top: -10px;
       width: $width;
       outline: none;
       height: $input-height;
       margin: 0;
       padding: 0;
+      appearance : none;
     }  
     
     input[type="range"]::-webkit-slider-thumb {
@@ -30,13 +31,12 @@
       z-index: 1;
       outline: 0;    
       -webkit-appearance: none;
-      width: $input-height;
-      height: $input-height;
-      border: none;
-      border-radius: $input-border-radius;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, lighten($input-thumb-color,60%)), color-stop(100%, $input-thumb-color)); /* android <= 2.2 */
-      background-image: -webkit-linear-gradient(top , lighten($input-thumb-color,60%) 0, $input-thumb-color 100%); /* older mobile safari and android > 2.2 */;
-      background-image: linear-gradient(to bottom, lighten($input-thumb-color,60%) 0, $input-thumb-color 100%); /* W3C */
+      width: 20px;
+      height: 20px;
+      appearance: none;
+      border-radius: 50%;
+      background: #fff;
+      border: 4px solid $black;
     }
     
     input[type="range"]::-moz-range-thumb {
@@ -44,11 +44,12 @@
       position: relative;
       z-index: 10;
       -moz-appearance: none;
-      width: $input-height;
-      height: $input-height;
-      border: none;
-      border-radius: $input-border-radius;
-      background-image: linear-gradient(to bottom, lighten($input-thumb-color,60%) 0, $input-thumb-color 100%); /* W3C */
+      width: 20px;
+      height: 20px;
+      appearance: none;
+      border-radius:  50%;
+      background: #fff;
+      border: 4px solid $black;/* W3C */
     }
   
     input[type="range"]::-ms-thumb {
@@ -56,17 +57,17 @@
       position: relative;
       z-index: 10;
       -ms-appearance: none;
-      width: $input-height;
-      height: $input-height;
+      width: 20px;
+      height: 20px;
       border-radius: $input-border-radius;
       border: 0;
-      background-image: linear-gradient(to bottom, lighten($input-thumb-color,60%) 0, $input-thumb-color 100%); /* W3C */
+      background-image:  red; /* W3C */
     }
     
     input[type=range]::-moz-range-track {
       position: relative;
       z-index: -1;
-      background-color: rgba(0, 0, 0, 1);
+      background-color: red;
       border: 0;
     }
     
@@ -77,10 +78,168 @@
     } 
     
     input[type=range]::-moz-focus-outer {
-      border: 0;
+      border: 2px solid $black;
     }
   }
   
   div.range-slider {
-    @include range-slider(300px, 300px, 50px, #F1EFEF, #413F41, left);
+    @include range-slider(100%, 300px, 50px, #F1EFEF, #413F41, left);
   }
+.sorter {
+  position: absolute;
+  padding-top: 17vh;
+  top: 0;
+  right: -35%;
+  background-color: $black;
+  width: 35%;
+  height: 100vh;
+  color: #fff;
+  z-index: 2;
+  transition: all .3s ease-in-out;
+  &__close {
+    border: none;
+    outline: none;
+    background-color: $black;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      path {
+        stroke: #fff;
+        transition: all .3s ease-in-out;
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          stroke: $brown;
+        }
+      }
+    }
+  }
+  &__wrapper {
+    height: 65vh;
+    width: 65%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  div.range-slider {
+    height: auto;
+  }
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    p {
+      color: $brown;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+    label {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: start;
+      align-items: center;
+      margin-bottom: 12px;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 28px;
+        height: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        justify-content: space-between;
+        text-align: justify;
+        display: flex;
+        left: -5px;
+        background-color: $black;
+        background-image: url('/img/catalog/input.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        pointer-events: none;
+        user-select: none;
+        cursor: pointer;
+      }
+    }
+    label.checked {
+      &::after {
+        position: absolute;
+        content: "";
+        width: 18px;
+        height: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        justify-content: space-between;
+        text-align: justify;
+        display: flex;
+        left: 0px;
+        background-color: $black;
+        background-image: url('/img/catalog/x.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        pointer-events: none;
+        user-select: none;
+       cursor: pointer;
+      }
+    }
+  }
+  &__input {
+    margin: 0;
+    margin-right: 8px;
+    cursor: pointer;
+    width: 27px;
+    height: 17px;
+  }
+  div.range-slider input[type=range] {
+    height: 20px;
+    border-radius: 0;
+    background: $black;
+    -webkit-box-shadow: inset 0 1px 0 0 $black, inset 0 -1px 0 0 $black;
+    width: 100%;
+    
+  }
+  .range-slider {
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 1px;
+      content: '';
+      background-color: #fff;
+      z-index: 9;
+    }
+  }
+  p.rangeValues {
+    position: absolute;
+    top: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: #fff;
+  }
+}
+.sorter.visible {
+  right: 0;
+}
+@media(max-width: 991px) {
+  .sorter {
+    width: 50%;
+    right: -50%;
+  }
+}
+@media(max-width: 576px) {
+  .sorter {
+    width: 80%;
+    right: -90%;
+  }
+}

@@ -1,40 +1,58 @@
 <div class="sorter">
-    <div class="sorter__close">
-        <div></div>
-        <div></div>
-    </div>
+    <button class="sorter__close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M2 2L30 30M30 2L2 30" stroke="white" stroke-width="4.14032"/>
+        </svg>
+    </button>
     <div class="sorter__wrapper">
-        <p>Сортировать по:</p>
-        <input class="sorter__input" type="checkbox" name="new">
-        <label for="new">Новизне</label>
-        <input class="sorter__input" type="checkbox" name="price">
-        <label for="price">Возрастанию цены</label>
-        <input class="sorter__input" type="checkbox" name="low-price">
-        <label for="low-price">Убыванию цены</label>
-
-        <p>Фильтры</p>
-        <input class="sorter__input" type="checkbox" name="all">
-        <label for="all">Все</label>
-        <input class="sorter__input" type="checkbox" name="decor">
-        <label for="decor">Декор</label>
-        <input class="sorter__input" type="checkbox" name="plates">
-        <label for="plates">Миски и салатники</label>
-        <input class="sorter__input" type="checkbox" name="sets">
-        <label for="sets">Наборы</label>
-        <input class="sorter__input" type="checkbox" name="glases">
-        <label for="glases">Стаканы</label>
-        <input class="sorter__input" type="checkbox" name="plate">
-        <label for="plate">Тарелки</label>
-        <input class="sorter__input" type="checkbox" name="kettles">
-        <label for="kettles">Чайники</label>
-        <input class="sorter__input" type="checkbox" name="caps">
-        <label for="caps">Чашки и кружки</label>
-
-        <p>Цена</p>
-        <div class="range-slider">
-            <span class="rangeValues"></span>
-            <input value="150" min="150" max="10000" step="1" type="range">
-            <input value="10000" min="150" max="10000" step="1" type="range">
+        <div class="sorter__wrap">
+            <p>Сортировать по:</p>
+            <label for="new">Новизне
+                <input class="sorter__input" type="checkbox" name="new">
+            </label>
+            <label for="price">Возрастанию цены
+                <input class="sorter__input" type="checkbox" name="price">
+            </label>
+            <label for="low-price">Убыванию цены
+                <input class="sorter__input" type="checkbox" name="low-price">
+            </label>
+        </div>
+        
+        <div class="sorter__wrap">
+            <p>Фильтры</p>
+            <label class="checked" for="all">Все
+                <input class="sorter__input" type="checkbox" name="all">
+            </label>
+            <label for="decor">Декор
+                <input class="sorter__input" type="checkbox" name="decor">
+            </label>
+            <label for="plates">Миски и салатники
+                <input class="sorter__input" type="checkbox" name="plates">
+            </label>
+            <label for="sets">Наборы
+                <input class="sorter__input" type="checkbox" name="sets">
+            </label>
+            <label for="glases">Стаканы
+                <input class="sorter__input" type="checkbox" name="glases">
+            </label>
+            <label for="plate">Тарелки
+                <input class="sorter__input" type="checkbox" name="plate">
+            </label>
+            <label for="kettles">Чайники
+                <input class="sorter__input" type="checkbox" name="kettles">
+            </label>
+            <label for="caps">Чашки и кружки
+                <input class="sorter__input" type="checkbox" name="caps">
+            </label>
+        </div>
+       
+        <div class="sorter__wrap">
+            <p>Цена</p>
+            <div class="range-slider">
+                <input value="150" min="150" max="10000" step="1" type="range">
+                <input value="10000" min="150" max="10000" step="1" type="range">
+                <p class="rangeValues"> <span></span> <span></span></p>
+            </div>
         </div>
     </div>
 </div>
