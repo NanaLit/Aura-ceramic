@@ -1,6 +1,7 @@
 .catalog {
     padding: 50px 0 150px;
-    position: relative;
+    filter: blur(0px);
+    transition: all .3s ease-in-out;
     &__header {
         display: flex;
         align-items: end;
@@ -53,6 +54,9 @@
             background-color: $black;
         }
     }
+}
+.catalog.blur {
+    filter: blur(4px);
 }
 @media(max-width: 576px) {
     .catalog {

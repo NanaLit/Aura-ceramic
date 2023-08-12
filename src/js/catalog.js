@@ -9,10 +9,16 @@ function getVals(){
     // Neither slider will clip the other, so make sure we determine which is larger
     if( slide1 > slide2 ){ let tmp = slide2; slide2 = slide1; slide1 = tmp; }
     
-    let displayElement = parent.getElementsByClassName("rangeValues")[0];
+    // let displayElement = parent.getElementsByClassName("rangeValues")[0];
     
-        displayElement.innerHTML = slide1 + " ₽ - " + slide2 + "  ₽";
-    }
+    //     displayElement.innerHTML = slide1 + " ₽ - " + slide2 + "  ₽";
+    // }
+    let firstEl = document.querySelectorAll('.rangeValues > span')[0];
+    let secondEl = document.querySelectorAll('.rangeValues > span')[1];
+    firstEl.innerHTML = slide1 + " ₽";
+    secondEl.innerHTML = slide2 + " ₽";
+}
+
     
 window.onload = function(){
     // Initialize Sliders
@@ -28,3 +34,39 @@ window.onload = function(){
             }
         }
 }
+
+const header = document.querySelector('.header');
+const catalog = document.querySelector('.catalog');
+const sortButton = document.querySelector('.catalog__sort');
+const sorter = document.querySelector('.sorter');
+const body = document.querySelector('body');
+const closeButton = document.querySelector('.sorter__close svg');
+
+sortButton.addEventListener('click', () => {
+    header.classList.add('blur');
+    catalog.classList.add('blur');
+    sorter.classList.add('visible');
+    body.classList.add('lock');
+});
+
+closeButton.addEventListener('click', () => {
+    header.classList.remove('blur');
+    catalog.classList.remove('blur');
+    sorter.classList.remove('visible');
+    body.classList.remove('lock');
+});
+
+
+const inputs = document.querySelectorAll('.sorter__input');
+const lables = document.querySelectorAll('label');
+
+inputs.forEach( (item, i) => {
+    item.addEventListener('click', () => {
+        console.log(i)
+        if(item.checked) {
+            lables[i].classList.add('checked');
+        } else {
+            lables[i].classList.remove('checked');
+        }
+    })
+})
