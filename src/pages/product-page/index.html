@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+@include('../../components/head/_head.html', {
+"title": "Aura ceramic | Catalog"
+})
+
+<body>
+
+  <main>
+    @include('../../components/header/_header.html')
+    <section class="product">
+      <div class="container">
+        <div class="product__inner">
+          <div class="product__left-box">
+            <div class="product__collection">
+              <span>Коллекция</span>
+              <span>Япония</span>
+            </div>
+
+            <div class="product__name">
+              <span>Бокал №3</span>
+              <span>Мрамор</span>
+            </div>
+
+            <div class="product__price">1 300 ₽</div>
+
+            <div class="product__spec-list">
+              <div class="product__spec-item">
+                <span>В наличии</span>
+                <span>7 шт</span>
+              </div>
+
+              <div class="product__spec-right">
+                <div class="product__spec-item">
+                  <span>Размеры</span>
+                  <span>8.5 × 8.5 × 7.5 см</span>
+                </div>
+
+                <div class="product__spec-item">
+                  <span>Вес</span>
+                  <span>200 г</span>
+                </div>
+
+                <div class="product__spec-item">
+                  <span>Объем</span>
+                  <span>250-270 мл</span>
+                </div>
+              </div>
+            </div>
+
+            <svg class="product__border" width="100%" height="2" preserveAspectRatio="none" viewBox="0 0 846 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 1H846" stroke="#7E7767" stroke-dasharray="15 10"/>
+            </svg>
+
+            <div class="product__bottom">
+              <div class="product__descr">
+                <div class="product__descr-title">Описание</div>
+                <div class="product__text">
+                  <p>Мраморный рисунок — результат отливки из двух глин: белой и цветной. Их переливы напоминают то вершины гор, то море, то природный камень.</p>
+                  <p>Все изделия изготовлены вручную, поэтому в жизни могут ненмого отличаться от изображения на сайте. </p>
+                </div>
+              </div>
+
+              <div class="product__descr">
+                <div class="product__descr-title">Уход</div>
+                <div class="product__text">
+                  <p>Можно мыть в посудомоечной машине и греть в микроволновой печи</p>
+                </div>
+              </div>
+
+              <div class="product__descr">
+                <div class="product__descr-title">Состав</div>
+                <div class="product__text">
+                  <p>Полуфарфор, пищевые глазури</p>
+                </div>
+              </div>
+
+              <div class="product__descr">
+                <div class="product__descr-title">Максимальная температура</div>
+                <div class="product__text">
+                  <p>70-75 градусов</p>
+                </div>
+              </div>
+            </div>
+
+            <svg class="product__border" width="100%" height="2" preserveAspectRatio="none" viewBox="0 0 846 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 1H846" stroke="#7E7767" stroke-dasharray="15 10"/>
+            </svg>
+
+          </div>
+
+          <div class="product__right-box">
+            <div class="product__slider swiper">
+              <div class="swiper-wrapper">
+                <div class="product__item swiper-slide">
+                  <img src="../img/product-page/product-1.jpg" alt="товар">
+                </div>
+                <div class="product__item swiper-slide">
+                  <img src="../img/product-page/product-1.jpg" alt="товар">
+                </div>
+                <div class="product__item swiper-slide">
+                  <img src="../img/product-page/product-1.jpg" alt="товар">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <button class="product__btn">Добавить в корзину</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="like">
+      <div class="container">
+        <h2 class="product__title subtitle">Вам понравится:</h2>
+        <ul class="like__list">
+          <li class="like__item">
+            <a href="#">
+              <img src="../img/product-page/like-1.jpg" alt=" керамическая чаша">
+            </a>
+          </li>
+          <li class="like__item">
+            <a href="#">
+              <img src="../img/product-page/like-2.jpg" alt=" керамическая чаша">
+            </a>
+          </li>
+          <li class="like__item">
+            <a href="#">
+              <img src="../img/product-page/like-3.jpg" alt=" керамическая чаша">
+            </a>
+          </li>
+          <li class="like__item">
+            <a href="#">
+              <img src="../img/product-page/like-4.jpg" alt=" керамическая чаша">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  @include('../../components/footer/_footer.html')
+  <script src="/js/libs/gsap.min.js"></script>
+  <script src="/js/libs/ScrollTrigger.min.js"></script>
+  <script src="/js/libs/ScrollToPlugin.min.js"></script>
+  <script src="/js/libs/SmoothScroll.min.js"></script>
+  <script src="/js/libs/swiper-bundle.min.js"></script>
+  <script src="/js/main.bundle.js"></script>
+  <script src="/js/productPage.bundle.js"></script>
+  <!-- <script src ="/js/about.bundle.js"></script> -->
+</body>
+
+</html>
