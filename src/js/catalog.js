@@ -69,4 +69,33 @@ inputs.forEach( (item, i) => {
             lables[i].classList.remove('checked');
         }
     })
-})
+});
+
+function toggleContent (btnClass, containerClass) {
+    gsap.registerPlugin(ScrollToPlugin);
+    gsap.registerPlugin(ScrollTrigger);
+    
+    const btn = document.querySelector(btnClass),
+    container = document.querySelector(containerClass);
+
+    let toggleBlock = gsap.to(container, {
+        height: 'auto',
+        paused: true,
+        autoAlpha: 1,
+        duration: 2,
+        ease: 'power1.out'
+    })
+
+    btn.addEventListener('click', () => {
+        container.classList.toggle('show');
+        container.classList.contains('show') ? toggleBlock.play() : toggleBlock.reverse();
+
+        container.classList.contains('show') ? btn.classList.add('hide') : null;
+    })
+    
+    btn.addEventListener('click', () => {
+        container.classList.contains('show') ? null :  gsap.to(window, { duration: 2, ease: "power1.out", scrollTo: '.schedule__list' });
+    })
+}
+
+toggleContent('.catalog__more', '.catalog__wrapper--more');
