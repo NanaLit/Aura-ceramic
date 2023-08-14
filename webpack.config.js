@@ -5,8 +5,9 @@ const config = {
     entry: {
         main: "./src/js/main.js",
         index: "./src/js/index.js",
-    catalog: "./src/js/catalog.js",
-        productPage: "./src/js/productPage.js"
+        catalog: "./src/js/catalog.js",
+        productPage: "./src/js/productPage.js",
+        cart: "./src/js/cart.js",
     },
     mode: 'production',
     output: {
