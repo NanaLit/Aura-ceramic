@@ -8,6 +8,9 @@
         justify-content: space-between;
         align-items: center;
     }
+    &__none {
+        display: none;
+    }
     &__wrapper {
         width: 50%;
         img {

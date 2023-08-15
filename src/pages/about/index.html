@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+@include('../../components/head/_head.html', {
+  "title": "Aura ceramic | О нас"
+})
+
+  <body>
+    <div class="owerlay"></div>
+    @include('../../components/header/_header.html')
+
+    <main class="main about">
+      
+        @include('../../components/promo/_promo.html', {
+            "title": "Широкий ассортимент <span>керамических</span> изделий, созданных с любовью и <span>мастерством.</span>",
+            "class": "promo__none",
+            "img": "/img/about/promo.png"
+        })
+        @include('../../components/technics/_technics.html', {
+            "img1": "/img/about/first.jpg",
+            "img2": "/img/about/second.jpg",
+            "title": "Мастер Сергей Белых",
+            "descr": "Каждый предмет в нашей коллекции является уникальным произведением искусства. Сергей воплощают свою креативность и творчество в каждой детали, создавая неповторимые керамические изделия, которые будут радовать вас и ваших близких. <br> <br>В нашем магазине вы найдете разнообразие товаров, начиная от красивых ваз и скульптур, до удобной посуды и украшений для дома. Мы также предлагаем услуги по индивидуальному заказу, чтобы вы могли получить именно то, что искали."
+          })
+        @include('../../components/princip/index.html')
+    </main>
+
+  @include('../../components/footer/_footer.html')
+  <script src="/js/libs/gsap.min.js"></script>
+  <script src="/js/libs/ScrollTrigger.min.js"></script>
+  <script src="/js/libs/ScrollToPlugin.min.js"></script>
+  <script src="/js/libs/SmoothScroll.min.js"></script>
+  <script src="/js/libs/swiper-bundle.min.js"></script>
+  <script src="/js/main.bundle.js"></script>
+  <script src="/js/index.bundle.js"></script>
+  
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+@include('../../components/head/_head.html', {
+"title": "Aura ceramic | Корзина"
+})
+
+<body>
+
+  <main class="light">
+    @include('../../components/header/_header.html')
+
+    <section class="cart">
+      <div class="container">
+        <div class="cart__top">
+          <a class="cart__back" href="/catalog/">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.1667 22L1 12M1 12L10.1667 2M1 12H23" stroke="#1A1A19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="cart__title">Корзина</div>
+          <button class="cart__clean" type="button">Очистить корзину</button>
+        </div>
+
+        <ul class="cart__list">
+          <li class="cart__item">
+            <label class="cart__select">
+              <input class="sr-only" type="checkbox" checked>
+              <span></span>
+            </label>
+
+            <div class="cart__img">
+              <img src="../img/cart/prod-1.jpg" alt="керамическая чаша">
+            </div>
+
+            <div class="cart__name">Ваза “Джунгли”</div>
+
+            <div class="cart__price cart__price--unit">8 000 руб.</div>
+
+            <div class="cart__amount">
+              <button class="dec" type="button">–</button>
+              <input type="text" value="1" readonly>
+              <button class="inc" type="button">+</button>
+            </div>
+
+            <div class="cart__price">8 000 руб.</div>
+            
+            <button class="cart__delete">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6.17647H20M9 3H15M15.5 21H8.5C7.39543 21 6.5 20.0519 6.5 18.8824L6.0434 7.27937C6.01973 6.67783 6.47392 6.17647 7.04253 6.17647H16.9575C17.5261 6.17647 17.9803 6.67783 17.9566 7.27937L17.5 18.8824C17.5 20.0519 16.6046 21 15.5 21Z" stroke="#1A1A19" stroke-linecap="round"/>
+                </svg>
+            </button>
+          </li>
+
+          <li class="cart__item">
+            <label class="cart__select">
+              <input class="sr-only" type="checkbox" checked>
+              <span></span>
+            </label>
+
+            <div class="cart__img">
+              <img src="../img/cart/prod-2.jpg" alt="керамическая чаша">
+            </div>
+
+            <div class="cart__name">Миска</div>
+
+            <div class="cart__price cart__price--unit">1 300 руб.</div>
+
+            <div class="cart__amount">
+              <button class="dec" type="button">–</button>
+              <input type="text" value="2" readonly>
+              <button class="inc" type="button">+</button>
+            </div>
+
+            <div class="cart__price">2 600 руб.</div>
+            
+            <button class="cart__delete">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6.17647H20M9 3H15M15.5 21H8.5C7.39543 21 6.5 20.0519 6.5 18.8824L6.0434 7.27937C6.01973 6.67783 6.47392 6.17647 7.04253 6.17647H16.9575C17.5261 6.17647 17.9803 6.67783 17.9566 7.27937L17.5 18.8824C17.5 20.0519 16.6046 21 15.5 21Z" stroke="#1A1A19" stroke-linecap="round"/>
+                </svg>
+            </button>
+          </li>
+        </ul>
+
+        <button class="cart__clean cart__clean--bottom" type="button">Очистить корзину</button>
+
+        <svg class="cart__border" width="100%" height="2" preserveAspectRatio="none" viewBox="0 0 846 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 1H846" stroke="#7E7767" stroke-dasharray="15 10"/>
+        </svg>
+
+        <div class="cart__bottom">
+          <ul class="cart__info">
+            <li class="cart__info-item">
+              <div class="cart__info-title">Стоимость товаров:</div>
+              <div class="cart__subtotal">10 600 руб.</div>
+            </li>
+            <li class="cart__info-item">
+              <div class="cart__info-title">Стоимость доставки:</div>
+              <div class="cart__subtotal">Бесплатно</div>
+            </li>
+            <li class="cart__info-item">
+              <div class="cart__info-title">Итого:</div>
+              <div class="cart__subtotal">10 600 руб.</div>
+            </li>
+          </ul>
+          <a class="cart__buy" href="./buy-page/">Перейти к оформлению</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="like">
+      <div class="container">
+        <h2 class="product__title subtitle">С этим покупают:</h2>
+        <ul class="like__list">
+          <li class="like__item">
+            <a href="#">
+              <img src="../img/cart/like-1.jpg" alt="керамическая чаша">
+            </a>
+          </li>
+          <li class="like__item">
+            <a href="#">
+              <img src="../img/cart/like-2.jpg" alt="керамическая чаша">
+            </a>
+          </li>
+          <li class="like__item">
+            <a href="#">
+              <img src="../img/cart/like-3.jpg" alt="керамическая чаша">
+            </a>
+          </li>
+          <li class="like__item">
+            <a href="#">
+              <img src="../img/cart/like-4.jpg" alt="керамическая чаша">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  @include('../../components/footer/_footer.html')
+  <script src="/js/libs/gsap.min.js"></script>
+  <script src="/js/libs/ScrollTrigger.min.js"></script>
+  <script src="/js/libs/ScrollToPlugin.min.js"></script>
+  <script src="/js/libs/SmoothScroll.min.js"></script>
+  <script src="/js/main.bundle.js"></script>
+  <script src="/js/cart.bundle.js"></script>
+</body>
+
+</html>

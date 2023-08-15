@@ -9,10 +9,19 @@
 
     <main class="main">
       
-      @include('./components/promo/_promo.html')
+      @include('./components/promo/_promo.html', {
+        "title": "Полностью <span>ручное</span> <span>производство</span> керамики",
+        "class": "promo__catalog",
+        "img": "/img/promo/promo.png"
+      })
       @include('./components/popular/_popular.html')
       @include('./components/events/_events.html')
-      @include('./components/technics/_technics.html')
+      @include('./components/technics/_technics.html', {
+        "img1": "/img/technics/first.jpg",
+        "img2": "/img/technics/second.jpg",
+        "title": "Соединяем современные и традиционные техники",
+        "descr": "Aura Ceramics — полностью ручное производство, соединяющее современные и традиционные техники. Мы поддерживаем принципы устойчивого развития и fair trade. За каждым предметом стоит история, члены нашей команды, которыми мы очень гордимся и дорожим."
+      })
      
     </main>
 

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+@include('../../components/head/_head.html', {
+"title": "Aura ceramic | Корзина"
+})
+
+<body>
+
+  <main>
+    @include('../../components/header/_header.html')
+
+    <section class="order">
+      <div class="container">
+        <div class="order__top">
+          <a class="order__back" href="/catalog/">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.1667 22L1 12M1 12L10.1667 2M1 12H23" stroke="#1A1A19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="order__title">Оформление заказа</div>
+        </div>
+
+        <form class="order__form">
+          <div class="order__left-box">
+            <div class="order__subtitle">Ваши данные</div>
+
+            <div class="order__data">
+              <label class="order__label">
+                <span>Страна или регион</span>
+                <input type="text" placeholder="Россия" value="Россия">
+              </label>
+              <label class="order__label">
+                <input type="text" placeholder="Город">
+              </label>
+              <label class="order__label">
+                <input type="text" placeholder="Адрес: улица, дом, квартира">
+              </label>
+              <label class="order__label">
+                <input type="text" placeholder="Почтовый индекс">
+              </label>
+              <label class="order__label">
+                <input type="text" placeholder="Имя">
+              </label>
+              <label class="order__label">
+                <input type="text" placeholder="Фамилия">
+              </label>
+              <label class="order__label">
+                <input type="email" placeholder="Эл. почта">
+              </label>
+              <label class="order__label">
+                <input type="text" placeholder="Подтвердите адрес эл. почты">
+              </label>
+              <label class="order__label">
+                <input type="text" placeholder="Телефон">
+              </label>
+            </div>
+
+            <div class="order__subtitle">Способ доставки</div>
+
+            <div class="order__way">
+              <div class="order__way-box">
+                <div class="order__way-title">Почтоматы 24/7 и пункты выдачи</div>
+                <div class="order__way-text">Бесплатно</div>
+              </div>
+              <div class="order__way-box">
+                <div class="order__way-title">Курьерская доставка</div>
+                <div class="order__way-text">от 249  ₽</div>
+              </div>
+            </div>
+
+            <button class="order__way-btn" type="button">Выбрать отделение</button>
+
+            <div class="order__subtitle">Способ оплаты</div>
+
+            <div class="order__way">
+              <div class="order__way-box">
+                <div class="order__way-title">Банковской картой</div>
+                <ul>
+                  <li>
+                    <img src="" alt="иконка банковской карты">
+                  </li>
+                  <li>
+                    <img src="" alt="иконка банковской карты">
+                  </li>
+                  <li>
+                    <img src="" alt="иконка банковской карты">
+                  </li>
+                </ul>
+              </div>
+              <div class="order__way-box">
+                <div class="order__way-title">Наличными при получении</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order__right-box">
+            <div class="order__cart">
+              <div class="order__cart-title"></div>
+              <ul class="order__list">
+                <li class="order__item">
+                  <div class="order__img">
+                    <img src="" alt="">
+                  </div>
+                  <div class="order__product">
+                    <div class="order__name"></div>
+                    <div class="order__count"></div>
+                  </div>
+                  <div class="order__price"></div>
+                </li>
+
+                <li class="order__item">
+                  <div class="order__img">
+                    <img src="" alt="">
+                  </div>
+                  <div class="order__product">
+                    <div class="order__name"></div>
+                    <div class="order__count"></div>
+                  </div>
+                  <div class="order__price"></div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="order__total">
+              <div class="order__total-list">
+                <li class="order__total-item">
+                  <span></span>
+                  <span></span>
+                </li>
+                <li class="order__total-item">
+                  <span></span>
+                  <span></span>
+                </li>
+                <div class="order__total-descr">
+                  <p></p>
+                  <p></p>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="373" height="2" preserveAspectRatio="none" viewBox="0 0 373 2" fill="none">
+                  <path d="M0 1H373" stroke="#7E7767" stroke-dasharray="15 10"/>
+                </svg>
+
+                <div class="order__total-bottom">
+                  <span></span>
+                  <span></span>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </form>
+
+
+
+        
+      </div>
+    </section>
+
+
+
+  </main>
+
+  @include('../../components/footer/_footer.html')
+  <script src="/js/libs/gsap.min.js"></script>
+  <script src="/js/libs/ScrollTrigger.min.js"></script>
+  <script src="/js/libs/ScrollToPlugin.min.js"></script>
+  <script src="/js/libs/SmoothScroll.min.js"></script>
+  <script src="/js/main.bundle.js"></script>
+  <script src="/js/cart.bundle.js"></script>
+</body>
+
+</html>
