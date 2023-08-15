@@ -10,6 +10,31 @@
 .about .technics__button {
     display: none;
 }
+.market .promo__descr, .market .promo__address {
+    display: block;
+}
+.market {
+    .promo {
+        padding: 150px 0 140px;
+        &__wrap {
+            flex-direction: row-reverse;
+        }
+        &__wrapper {
+            &:first-child{
+                width: 54%;
+            }
+        }
+        &__descr {
+            width: 60%;
+            margin-bottom: 45px;
+        }
+        &__address {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: $darkgray;
+        }
+    }
+}
 @media(max-width: 576px) {
     .about .promo__wrapper {
         &:first-child {
@@ -17,6 +42,19 @@
         }
         &:last-child {
             width: 100%;
+        }
+    }
+    .market .promo {
+        padding: 70px 0 100px;
+        &__wrap {
+            flex-direction: column;
+        }
+        &__descr {
+            width: 90%;
+            margin-bottom: 40px;
+        }
+        &__address {
+            width: 70%;
         }
     }
 }
