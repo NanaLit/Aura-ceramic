@@ -29,6 +29,12 @@
             color: $background;
         }
     }
+    &__descr {
+        display: none;
+    }
+    &__address {
+        display: none;
+    }
     &__catalog {
         display: flex;
         align-items: center;
