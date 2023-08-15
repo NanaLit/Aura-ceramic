@@ -1,0 +1,22 @@
+
+.about .promo__wrapper {
+    &:first-child {
+        width: 70%;
+    }
+    &:last-child {
+        width: 30%;
+    }
+}
+.about .technics__button {
+    display: none;
+}
+@media(max-width: 576px) {
+    .about .promo__wrapper {
+        &:first-child {
+            width: 100%;
+        }
+        &:last-child {
+            width: 100%;
+        }
+    }
+}
