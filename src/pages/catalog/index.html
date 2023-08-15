@@ -71,7 +71,27 @@
                             "descr": "250ml"
                         })
                     </ul>
-                    <p class="catalog__more">Показать больше</p>
+                    <ul class="catalog__wrapper catalog__wrapper--more">
+                        @include('../../components/card/_card.html', {
+                            "image": "5",
+                            "name": "Аура",
+                            "type": "Ваза",
+                            "descr": "250ml"
+                        })
+                        @include('../../components/card/_card.html', {
+                            "image": "6",
+                            "name": "Комбо",
+                            "type": "Кружки",
+                            "descr": "250ml"
+                        })
+                        @include('../../components/card/_card.html', {
+                            "image": "7",
+                            "name": "Лоск",
+                            "type": "Миска",
+                            "descr": "250ml"
+                        })
+                    </ul>
+                    <button class="catalog__more">Показать больше</button>
                 </div>
             </section>
             @include('../../components/sorter/_sorter.html')
