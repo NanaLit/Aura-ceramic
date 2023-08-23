@@ -1,6 +1,5 @@
 .card {
     width: 32%;
-   
     &__img {
         overflow: hidden;
         border-radius: 12px;
@@ -13,7 +12,7 @@
     &__description {
         margin-top: 20px;
         display: flex;
-        align-items: bottom;
+        align-items: flex-start;
         justify-content: space-between;
     }
     &__wrapper {
@@ -21,6 +20,14 @@
         flex-direction: column;
         justify-content: space-between;
         gap: 10px;
+        &--right {
+          flex-direction: row;
+          align-items: center;
+          gap: 20px;
+        }
+    }
+    &__price {
+      font-size: 20px;
     }
     &__button {
         border: none;
@@ -50,12 +57,14 @@
         }
     }
     &__name {
-        margin-top: 15px;
+        margin-top: 5px;
         font-size: 28px;
         font-weight: 500;
         color: $black;
     }
-    &__type, &__descr {
+    &__type {
+        display: flex;
+        gap: 20px;
         font-size: 16px;
         color: $brown;
     }
@@ -66,6 +75,16 @@
             }
         }
     }
+}
+@media(max-width: 1440px) {
+  .card {
+    &__wrapper {
+      &--right {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  }
 }
 @media(max-width: 991px) {
     .card {

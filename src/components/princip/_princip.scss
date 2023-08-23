@@ -10,6 +10,7 @@
     &__list {
         width: 100%;
         display: flex;
+        align-items: flex-start;
         justify-content: space-between;
         flex-wrap: wrap;
     }
@@ -22,6 +23,7 @@
         h3 {
            font-size: 32px; 
            font-family: PTSerif, serif;
+           font-weight: 400;
            margin-left: 20px;
            position: relative;
            margin-bottom: 30px;
@@ -37,12 +39,16 @@
            }
         }
         &:first-child {
-            background-image: url('/img/princip/1.svg');
+            // background-image: url('/img/princip/1.svg');
+            background-color: #FAF7EF;
+            border-radius: 25px 25px 25px 90px;
             color: $black;
             margin-top: 75px;
         }
         &:nth-child(2) {
-            background-image: url('/img/princip/2.svg');
+            // background-image: url('/img/princip/2.svg');
+            border: 1px solid #FAF7EF;
+            border-radius: 25px;
             color: $accent;
             h3 {
                 &::before {
@@ -51,7 +57,9 @@
             }
         }
         &:last-child {
-            background-image: url('/img/princip/3.svg');
+            // background-image: url('/img/princip/3.svg');
+            border-radius: 25px 90px 25px 25px;
+            background-color: #FAF7EF;
             color: $black;
             margin-top: 200px;
         }
@@ -60,7 +68,7 @@
 @media(max-width: 1680px) {
     .princip {
         &__item {
-            padding: 28px 36px 95px 25px;
+            padding: 50px 36px 95px 25px;
         }
     }
 }
@@ -70,10 +78,12 @@
             margin-bottom: 50px;
         }
         &__list {
+            align-items: center;
             justify-content: space-around;
         }
         &__item {
-            width: 35%;
+          width: 100%;
+          max-width: 350px;
             h3 {
                 font-size: 22px;
                 margin-bottom: 20px;
@@ -94,11 +104,34 @@
         }
     }
 }
+
+@media(max-width: 991px) {
+  .princip {
+    &__item {
+      padding: 25px 36px 60px 25px;
+      &:first-child {
+        border-radius: 25px 25px 25px 55px;
+      }
+      &:last-child {
+        border-radius: 25px 55px 25px 25px;
+      }
+    }
+  }
+}
+
 @media(max-width: 768px) {
     .princip {
         padding: 80px 0;
         &__item {
             width: 47%;
+            h3 {
+              margin-left: 0;
+              &::before {
+                left: -15px;
+                width: 8px;
+                height: 8px;
+              }
+            }
         }
     }
 }
@@ -108,7 +141,6 @@
             padding: 26px 36px 30px 42px;
             width: 100%;
             margin-bottom: 20px;
-            width: 296px;
             height: 270px;
             &:last-child {
                 margin-top: 0;
