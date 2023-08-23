@@ -56,20 +56,25 @@ closeButton.addEventListener('click', () => {
     body.classList.remove('lock');
 });
 
+function toggleFilters(trigger, label) {
+    const inputs = document.querySelectorAll(trigger);
+    const lables = document.querySelectorAll(label);
 
-const inputs = document.querySelectorAll('.sorter__input');
-const lables = document.querySelectorAll('label');
+    inputs.forEach( (item, i) => {
+    
+        item.addEventListener('click', () => {
+            lables.forEach((label) => {
+                label.classList.remove('checked')
+                lables[i].classList.add('checked');
+            })
+        })
+    });
+}
+toggleFilters('.sorter__input--first', '.sorter__label--first');
+toggleFilters('.sorter__input--second', '.sorter__label--second');
 
-inputs.forEach( (item, i) => {
-    item.addEventListener('click', () => {
-        console.log(i)
-        if(item.checked) {
-            lables[i].classList.add('checked');
-        } else {
-            lables[i].classList.remove('checked');
-        }
-    })
-});
+// toggleFilters('.sorter__wrap--second > .sorter__input');
+
 
 function toggleContent (btnClass, containerClass) {
     gsap.registerPlugin(ScrollToPlugin);
