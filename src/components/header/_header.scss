@@ -23,7 +23,8 @@
     }
   }
   &__logo {
-    width: 5%;
+    max-width: 85px;
+    width: 100%;
     height: auto;
     img {
       width: 100%;
