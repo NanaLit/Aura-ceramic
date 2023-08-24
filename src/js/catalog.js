@@ -61,7 +61,7 @@ function toggleFilters(trigger, label) {
     const lables = document.querySelectorAll(label);
 
     inputs.forEach( (item, i) => {
-    
+        lables[0].classList.add('checked');
         item.addEventListener('click', () => {
             lables.forEach((label) => {
                 label.classList.remove('checked')
