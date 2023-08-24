@@ -62,13 +62,17 @@
                 transition: all .5s ease-in-out;
             }
             &:hover {
-                ellipse {
-                    fill: #E8E0D4;
-                }
-                path {
-                    rotate: -45deg;
-                    stroke: #1A1A19;
-                }
+              ellipse {
+                fill: #E8E0D4;
+              }
+              path {
+                  rotate: -45deg;
+                  stroke: #1A1A19;
+              }
+              path.arrow {
+                stroke: #1A1A19;
+                fill: #1A1A19;
+              }
             }
         }
     }

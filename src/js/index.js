@@ -14,21 +14,32 @@ window.addEventListener("DOMContentLoaded", () => {
     y: -100
   })
 
+
+  // gsap.utils.toArray(".promo__title").forEach((title) => {
+  // });
+  
+  
   const tlTitle = gsap.timeline({
-    ease: "power2.out"
+    scrollTrigger: {
+      trigger: '.promo__title',
+      start: 'top bottom',
+    }
   });
-  tlTitle.from('.promo__title div:not(.mask)', {
+  tlTitle.from(`.promo__title div:not(.mask)`, {
     opacity: 0,
-    stagger: 0.05,
+    stagger: {
+      amount: 1.2,
+    },
     x: -5,
     rotateX: 90
   })
-    .from(".promo__title span .mask", {
+    .from(`.promo__title span .mask`, {
       scaleX: 0,
       stagger: 0.5,
       duration: 1.2,
       ease: "power2.out"
     }, "<80%");
+  
   
   gsap.from('.technics__title div:not(.word)', {
     scrollTrigger: {
@@ -36,10 +47,14 @@ window.addEventListener("DOMContentLoaded", () => {
       start: "bottom bottom",
     },
     opacity: 0,
-    stagger: 0.08,
+    stagger: {
+      amount: 1.2,
+    },
     x: -5,
     rotateX: 90
   });
+
+
 
   gsap.from('.princip__title div:not(.word)', {
     scrollTrigger: {
@@ -47,7 +62,9 @@ window.addEventListener("DOMContentLoaded", () => {
       start: "bottom bottom",
     },
     opacity: 0,
-    stagger: 0.08,
+    stagger: {
+      amount: 1.2,
+    },
     x: -5,
     rotateX: 90
   });
