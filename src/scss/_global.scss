@@ -14,6 +14,9 @@ body {
 body.lock {
   overflow-y: hidden;
 }
+.main {
+  overflow-x: hidden;
+}
 main.light .header {
   background-color: #EAE8E0;
 }
