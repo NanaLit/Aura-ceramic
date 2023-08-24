@@ -1,6 +1,8 @@
 .catalog {
     padding: 50px 0 150px;
+    overflow-x: hidden;
     filter: blur(0px);
+    width: 100vw;
     transition: all .3s ease-in-out;
     &__header {
         display: flex;
