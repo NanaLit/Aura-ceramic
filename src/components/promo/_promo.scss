@@ -20,13 +20,26 @@
     }
     &__title {
         margin-bottom: 40px;
+        line-height: 1.1;
         span {
+            position: relative;
+            display: inline-block;
             font-size: 4.5vw;
-            background-color: #1a1a19;
-            border-radius: 5px;
             padding: 2px;
             mix-blend-mode: darken;
             color: $background;
+            &::before {
+              content: '';
+              position: absolute;
+              bottom: -3px;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 102%;
+              height: 4.5vw;
+              background-color: #1a1a19;
+              border-radius: 12px;
+              z-index: -1;
+            }
         }
     }
     &__descr {
@@ -60,6 +73,10 @@
                     rotate: -45deg;
                     stroke: #1A1A19;
                 }
+                path.arrow {
+                  stroke: #1A1A19;
+                  fill: #1A1A19;
+                }
             }
         }
     }
@@ -89,6 +106,15 @@
         }
     }
 }
+@media(max-width: 768px) {
+  .promo {
+      &__title {
+          span::before {
+            border-radius: 5px;
+          }
+      }
+  }
+}
 @media(max-width:576px) {
     .promo {
         &__wrap {
@@ -109,6 +135,9 @@
             margin-bottom: 5px;
             span {
                 font-size: 13vw;
+                &::before {
+                  height: 14.3vw;
+                }
             }
         }
         &__catalog {

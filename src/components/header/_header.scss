@@ -23,7 +23,8 @@
     }
   }
   &__logo {
-    width: 5%;
+    max-width: 85px;
+    width: 100%;
     height: auto;
     img {
       width: 100%;
@@ -34,13 +35,15 @@
     display: flex;
     width: 27%;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
+    position: relative;
   }
   &__block {
     width: 12%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
   &__cart {
     display: block;
@@ -65,12 +68,15 @@
     display: none;
   }
   &__description {
+    position: relative;
     display: none;
   }
   &__social {
+    position: relative;
     display: none;
   }
   &__wrapper {
+    position: relative;
     display: none;
   }
 }
@@ -241,8 +247,10 @@
       z-index: 4;
     }
     &__wrapper.active {
-      left: 0;
+      left: -20px;
       z-index: 3;
+      position: relative;
+      width: calc(100% + 40px);
     }
     &__head.active {
       a {
