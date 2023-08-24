@@ -6,6 +6,10 @@
         color: $accent;
         text-align: center;
         margin-bottom: 90px;
+        div {
+          display: inline-block;
+          transform-origin: 0% 50%;
+        }
     }
     &__list {
         width: 100%;

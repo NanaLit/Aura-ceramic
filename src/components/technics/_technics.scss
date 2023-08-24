@@ -39,6 +39,10 @@
     &__title {
         margin-bottom: 40px;
         margin-top: 40px;
+        div {
+          display: inline-block;
+          transform-origin: 0% 50%;
+        }
     }
     &__button {
         display: flex;
