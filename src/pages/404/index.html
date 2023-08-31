@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+@include('../../components/head/_head.html', {
+  "title": "Aura ceramic | Страница не найдена"
+})
+
+  <body class="page-404-body">
+    <header class="header-404">
+      <div class="container">
+        <a href="/" class="header-404__logo"><img src="/img/logo.png" alt="logo"></a>
+      </div>
+    </header>
+
+    <div class="page-404">
+      <div id="thanos">
+        <div class="page-404__message">Страница не найдена</div>
+        <div class="page-404__error">Ошибка 404</div>
+      </div>
+      <div class="page-404__link">
+        <a class="arrow-link" href="/">
+          <span class="dot"></span>
+          <span class="text">На главную</span>
+        </a>
+      </div>
+    </div>
+
+  
+  <script src="/js/libs/gsap.min.js"></script>
+  <script src="/js/libs/SmoothScroll.min.js"></script>
+  <script src="/js/libs/html2canvas.min.js"></script>
+  <script src="/js/page404.bundle.js"></script>
+  
+  </body>
+</html>

@@ -53,14 +53,17 @@
         align-items: center;
     }
     &__time {
-        width: 12%;
+        gap: 10px;
         font-weight: 500;
         display: flex;
         font-size: 16px;
         justify-content: space-between;
         align-items: center;
         svg {
+            margin-bottom: 5px;
             display: block;
+            width: 24px;
+            height: 24px;
             path {
                 fill: #1A1A19;
                 transition: all .5s ease-in-out;
@@ -68,6 +71,7 @@
         }
     }
     &__button {
+        display: inline-block;
         width: 31%;
         padding: 16px 0;
         text-align: center;
@@ -136,7 +140,6 @@
             font-size: 24px;
         }
         &__time {
-            width: 15%;
             svg {
                 margin-bottom: 5px;
             }
@@ -151,6 +154,9 @@
 }
 @media(max-width: 991px) {
     .events {
+        &__name {
+            width: 90%;
+        }
         &__item {
             padding: 0 20px;
         }
@@ -172,9 +178,6 @@
             height: auto;
             width: 100%;
         }
-        &__time {
-            width: 11%;
-        }
         &__name {
             display: block;
             width: 100%;
@@ -194,9 +197,6 @@
         &__date {
             width: 42%;
             margin-bottom: 20px;
-        }
-        &__time {
-            width: 21%;
         }
     }
 }

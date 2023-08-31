@@ -16,7 +16,7 @@ body.lock {
 }
 .main {
   position: relative;
-  width: 100vw;
+  max-width: 100vw;
   overflow-x: hidden;
 }
 main.light .header {
@@ -45,7 +45,7 @@ main.light .header {
 
 .title {
   font-family: "PTSerif", sans-serif;
-  font-size: 4.5vw;
+  font-size: 86px;
   font-weight: 400;
   color: #1A1A19;
   line-height: 1.3;
@@ -69,7 +69,119 @@ main.light .header {
   border: 0;
 }
 
+.arrow-link {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: auto;
+  border: 0;
+  box-shadow: none;
+  height: 58px;
+  line-height: 58px;
+  padding: 0 20px 0 70px;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 58px;
+    height: 58px;
+    border-radius: 58px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(1);
+    background-color: #1a1a19;
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+  }
+  .dot {
+    position: absolute;
+    overflow: hidden;
+    background-color: transparent;
+    left: 9px;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 0 1px #e8e0d4;
+    border-radius: 100%;
+    transform: translateY(-50%) translateX(0) scale(1);
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      transform: translateX(0);
+      background-image: url(../img/icons/arrow-btn.svg);
+      background-size: 65% auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: transform;
+    }
+  }
+  .text {
+    position: relative;
+    color: #1c1c1c;
+    font-weight: 600;
+    font-size: 16px;
+    transform: translateX(0);
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+      transform: scale(0.9);
+    }
+    .dot {
+      background-color: #e8e0d4;
+      transform: translateY(-53%) translateX(0.5vw) scale(0.3225);
+      &::before {
+        opacity: 0.0001;
+        transform: translateX(100%);
+      }
+    }
+    .text {
+      color: #e8e0d4;
+      transform: translateX(-0.5vw);
+    }
+  }
+  &--light {
+    &::before {
+      background-color: #e8e0d4;
+    }
+    .dot {
+      box-shadow: 0 0 0 1px #1A1A19;
+      &::before {
+        background-image: url(../img/icons/arrow-btn-dark.svg);
+      }
+    }
+    .text {
+      color: #e8e0d4;
+    }
+    &:hover {
+      .dot {
+        background-color: #1A1A19;
+      }
+      .text {
+        color: #1A1A19;
+      }
+    }
+  }
+}
 
+@media (max-width: 1920px) {
+.title {
+  font-size: 4.5vw;
+}
+}
 @media (max-width: 1280px) {
   body {
     font-size: 16px;
@@ -85,6 +197,24 @@ main.light .header {
   .subtitle {
     font-size: 4.5vw;
     margin-bottom: 40px;
+  }
+  .arrow-link {
+    height: 48px;
+    line-height: 48px;
+    padding: 0 20px 0 70px;
+    &::before {
+      width: 48px;
+      height: 48px;
+      border-radius: 48px;
+    }
+    .dot {
+      left: 8px;
+      width: 32px;
+      height: 32px;
+    }
+    .text {
+      font-size: 14px;
+    }
   }
 }
 

@@ -86,7 +86,7 @@
     @include range-slider(100%, 300px, 50px, #F1EFEF, #413F41, left);
   }
 .sorter {
-  position: absolute;
+  position: fixed;
   padding-top: 17vh;
   top: 0;
   right: -35%;

@@ -25,31 +25,6 @@
     }
     &__mail {
         margin-bottom: 75px;
-        a {
-            display: flex;
-            color: $accent;
-            align-items: center;
-            gap: 20px;
-            svg {
-                circle {
-                    fill: #E8E0D4;
-                    transition: all .5s ease-in-out;
-                }
-                path {
-                    rotate: 0;
-                    transform-origin: center;
-                    transition: all .5s ease-in-out;
-                }
-                &:hover {
-                    circle {
-                        fill: $darkgray;
-                    }
-                    path {
-                        rotate: -45deg;
-                    }
-                }
-            }
-        }
     }
     &__links {
         color: $brown;
@@ -66,15 +41,7 @@
         font-weight: 500;
     }
 }
-@media(max-width: 768px) {
-    .footer {
-        &__mail {
-            svg {
-                scale: 0.8;
-            }
-        }
-    }
-}
+
 @media(max-width: 576px) {
     .footer {
         padding: 55px 0;
