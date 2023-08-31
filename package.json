@@ -43,6 +43,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-svg-sprite": "^2.0.1",
     "gulp-svgmin": "^4.1.0",
+    "html2canvas": "^1.4.1",
     "imagemin-pngquant": "^9.0.2",
     "sass": "^1.56.1",
     "svg-sprite": "^2.0.2"

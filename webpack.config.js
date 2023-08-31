@@ -8,6 +8,8 @@ const config = {
         catalog: "./src/js/catalog.js",
         productPage: "./src/js/productPage.js",
         cart: "./src/js/cart.js",
+        order: "./src/js/order.js",
+        page404: "./src/js/page404.js",
     },
     mode: 'production',
     output: {

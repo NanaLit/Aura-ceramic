@@ -1,5 +1,5 @@
 .header {
-  overflow-x: clip;
+  overflow: hidden;
   filter: blur(0px);
   transition: all .3s ease-in-out;
   &__nav {

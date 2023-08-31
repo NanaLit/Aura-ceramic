@@ -33,13 +33,14 @@
         margin-top: 8px;
     }
     &__item {
-        width: 17vw;
-        height: 17vw;
+        width: 24%;
+        // height: 17vw;
         background-size: cover;
         border-radius: 12px;
         overflow: hidden;
         position: relative;
         display: block;
+        aspect-ratio: 1;
         &:first-child {
             background-image: url('/img/popular/1.jpg');
         }
@@ -91,6 +92,7 @@
         background-color: $black;
         position: relative;
         color: #fff;
+        cursor: pointer;
         &::before {
             content: '';
             width: 15px;
@@ -166,7 +168,32 @@
             display: none;
         }
         &__wrapper {
-            row-gap: 8vw;
+            row-gap: 7vw;
+            justify-content: space-between;
+        }
+        &__item {
+            width: 47%;
+            .arrow-link {
+                padding: 0 15px 0 50px;
+                line-height: 18px;
+                height: 40px;
+                &::before {
+                    left: 5px;
+                    width: 40px;
+                    height: 40px;
+                }
+                .dot {
+                    // top: 43%;
+                    left: 12px;
+                    width: 25px;
+                    height: 25px;
+                }
+                &:hover {
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }
